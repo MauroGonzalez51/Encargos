@@ -263,19 +263,83 @@ void categorizarEstudiante(const double notaFinal) {
 
 // -----------------------------------------------------------------------------------------------| >
 
-double porcentajeAprobacion();
+double porcentajeAprobacion(const double notaMinimaAprobar) {
+    int cantidadAprobados = 0;
+    for (int i = 0; i < cantidadEstudiantes; i++) {
+        if (estudiantes[i].notaFinal >= notaMinimaAprobar)
+            cantidadAprobados++; 
+    }
+    escribirLog("Porcentaje de Aprobacion: " + std::to_string((double) ((cantidadAprobados / cantidadEstudiantes) * 100)) + "%");
+    return (double) ((cantidadAprobados / cantidadEstudiantes) * 100);
+}
 
 // -----------------------------------------------------------------------------------------------| >
 
-double porcentajeExcelente();
+double porcentajeExcelente() {
+    escribirLog("Porcentaje Excelente: " + std::to_string((double) ((categoriasEstudiantes.excelente / cantidadEstudiantes) * 100)) + "%");
+    return (double) ((categoriasEstudiantes.excelente / cantidadEstudiantes) * 100);
+}
 
 // -----------------------------------------------------------------------------------------------| >
 
-std::string asignaturaMasAprobados();
+std::string asignaturaMasAprobados(const double notaMinimaAprobar) {
+    std::string asignaturaAprobados;
+    std::vector <std::string> asignaturas = {"Informatica", "Fisica", "Quimica"};
+    
+    // int mayorCantidadAprobados = 0;
+    // for (int i = 0; i < asignaturas.size(); i++) {
+    //     int cantidadAprobados = 0;
+    //     if (estudiantes[i].asignatura == (i + 1)) {
+    //         if (estudiantes[i].notaFinal >= notaMinimaAprobar)
+    //             cantidadAprobados++;
+    //     }
+
+    //     if (cantidadAprobados > mayorCantidadAprobados) {
+    //         mayorCantidadAprobados = cantidadAprobados;
+    //         asignaturaAprobados = asignaturas.at(i);
+    //     }
+    // }
+
+    int mayorCantidadAprobados = 0;
+    for (int asignatura = 0; asignatura < asignaturas.size(); asignatura++) {
+        int cantidadAprobados = 0;
+        for (int estudiante = 0; estudiante < cantidadEstudiantes; estudiante++) {
+            if (estudiantes[estudiante].asignatura == asignatura) {
+                if (estudiantes[estudiante].notaFinal >= notaMinimaAprobar) 
+                    cantidadAprobados++;
+            }
+        }
+        if (cantidadAprobados > mayorCantidadAprobados) {
+            mayorCantidadAprobados = cantidadAprobados;
+            asignaturaAprobados = asignaturas.at(asignatura - 1);
+        }
+    }
+
+    escribirLog("Asignatura mas aprobados: " + asignaturaAprobados);
+
+    return asignaturaAprobados;
+}
 
 // -----------------------------------------------------------------------------------------------| >
 
-int estudianteMenorNota();
+int estudianteMenorNota(const int asignaturaBuscar) {
+    int indiceEstudianteMenorNota;
+    std::vector <std::string> asignaturas = {"Informatica", "Fisica", "Quimica"};
+
+    double menorNota = 101.0;
+    for (int estudiante = 0; estudiante < cantidadEstudiantes; estudiante++) {
+        if (estudiantes[estudiante].asignatura == asignaturaBuscar) {
+            if (estudiantes[estudiante].notaFinal < menorNota) {
+                menorNota = estudiantes[estudiante].notaFinal;
+                indiceEstudianteMenorNota = estudiante;
+            }
+        }
+    }
+
+    escribirLog("Estudiante con la menor nota: " + estudiantes[indiceEstudianteMenorNota].nombre);
+
+    return indiceEstudianteMenorNota;
+}
 
 // -----------------------------------------------------------------------------------------------| >
 
@@ -288,6 +352,15 @@ void analizarDatos() {
     escribirLog("Cantidad de Estudiantes en REGULAR: " +  std::to_string(categoriasEstudiantes.regular));
     escribirLog("Cantidad de Estudiantes en INSUFICIENTE: " +  std::to_string(categoriasEstudiantes.insuficiente));
     escribirLog("Cantidad de Estudiantes en DEFICIENTE: " +  std::to_string(categoriasEstudiantes.deficiente));
+
+    escribirLinea("-");
+    std::cout << "Analisis de datos" << std::endl;
+    // ------------- No se cual es la menor nota para aprobar asi que hay que pasarsela a la funcion como parametro -------| > 
+    std::cout << "Porcentaje de Aprobacion: " << porcentajeAprobacion(50.0) << std::endl;
+    std::cout << "Porcentaje de Excelentes: " << porcentajeExcelente() << std::endl;
+    std::cout << "Asignatura con mas estudiantes aprobados: " << asignaturaMasAprobados(50.0) << std::endl; 
+    // ------------- Aqui igual, la funcion funciona para cualquier asignatura, solo hay que pasarle el indice de esta ----| >
+    std::cout << "Estudiante con la menor nota en Informatica: " << estudiantes[estudianteMenorNota(1)].nombre << std::endl;
 }
 
 // -------------------------- FUNCION MAIN ----------------------------------------------------------------------------------------------------|
