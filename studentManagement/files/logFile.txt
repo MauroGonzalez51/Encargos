@@ -122,3 +122,21 @@ Programa iniciado: Sat Nov 05 13:40:11 2022
 [INFO] Porcentaje Excelente: 0.000000%
 [INFO] Asignatura mas aprobados: Informatica
 [INFO] Estudiante con la menor nota: luis
+
+--------------------------------------------------------------------------------
+Programa iniciado: Sat Nov 05 13:41:24 2022
+
+[INFO] Usuario Creado: luis
+[INFO] Usuario Creado: jorge
+[INFO] Usuario Creado: james
+[INFO] Usuario Creado: johan
+[INFO] Usuario Creado: kevin
+[INFO] Cantidad de Estudiantes en EXCELENTE: 0
+[INFO] Cantidad de Estudiantes en SOBRESALIENTE: 0
+[INFO] Cantidad de Estudiantes en REGULAR: 0
+[INFO] Cantidad de Estudiantes en INSUFICIENTE: 1
+[INFO] Cantidad de Estudiantes en DEFICIENTE: 0
+[INFO] Porcentaje de Aprobacion: 100.000000%
+[INFO] Porcentaje Excelente: 0.000000%
+[INFO] Asignatura mas aprobados: Informatica
+[INFO] Estudiante con la menor nota: luis
