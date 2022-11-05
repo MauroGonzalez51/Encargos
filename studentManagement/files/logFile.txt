@@ -1,0 +1,27 @@
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 19:00:50 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 19:01:55 2022
+
+[INFO] Usuario Creado: luis
+[INFO] Usuario Creado: jorge
+[INFO] Usuario Creado: james
+[INFO] Usuario Creado: johan
+[INFO] Usuario Creado: kevin
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 19:02:10 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
