@@ -1,3 +1,6 @@
+// -------------------------- ENCABEZADOS Y CONSTANTES DEL PROGRAMA ---------------------------------------------------------------------------|
+//------------------------------------------------------------------------------------------------|
+
 #include <bits/stdc++.h>
 #include <conio.h>
 
@@ -13,9 +16,12 @@ struct {
     double notaFinal;
 } estudiantes[cantidadEstudiantes];
 
-// ------------------------------------------------------------------------------------------------|
+// -------------------------- FUNCIONES PARA INICIALIZAR Y ESCRIBIR EN EL LOG -----------------------------------------------------------------|
+// -----------------------------------------------------------------------------------------------| >
 
 std::ofstream logFile (folderPath +  "logFile.txt", std::ios::app);
+
+// -----------------------------------------------------------------------------------------------| >
 
 void escribirLinea(const int cantidadCaracteres, const std::string c) {
     logFile << std::endl;
@@ -24,12 +30,16 @@ void escribirLinea(const int cantidadCaracteres, const std::string c) {
     logFile << std::endl;
 }
 
+// -----------------------------------------------------------------------------------------------| >
+
 const char* horaActual() {
     time_t now = time(0);
     const char* horaActual = ctime(&now);
 
     return horaActual;
 }
+
+// -----------------------------------------------------------------------------------------------| >
 
 void escribirLog() {
     if (logFile.is_open()) {
@@ -38,24 +48,19 @@ void escribirLog() {
     }
 }
 
+// -----------------------------------------------------------------------------------------------| >
+
 void escribirLog(const std::string mensaje) {
     if (logFile.is_open())
         logFile << "[INFO] " << mensaje << std::endl;
 
 }
 
-// ------------------------------------------------------------------------------------------------|
+// -------------------------- FUNCIONES PARA CREAR LAS INSTANCIAS DE LOS USUARIOS -------------------------------------------------------------|
+// -----------------------------------------------------------------------------------------------| >
 
 bool crearUsuario(const std::string usuario, const std::string clave) {
     bool archivoCreado = false;
-
-    // if ((archivo.is_open()) && (!std::filesystem::exists(folderPath +  usuario + ".txt"))) {
-    //     archivo << usuario << std::endl;
-    //     archivo << clave << std::endl;
-    //     archivoCreado = true;
-    // } else 
-    //     escribirLog("El usuario: " + usuario + " Ya existe -> no se creara un nuevo archivo");
-    // std::cout << std::boolalpha << std::filesystem::exists(folderPath + usuario + ".txt") << std::endl;
 
     if (std::filesystem::exists(folderPath + usuario + ".txt"))
         escribirLog("El usuario: " + usuario +  " ya existe -> no se creara un nuevo archivo");
@@ -73,6 +78,8 @@ bool crearUsuario(const std::string usuario, const std::string clave) {
     return archivoCreado;
 }
 
+// -----------------------------------------------------------------------------------------------| >
+
 void inicializarUsuarios() {
     std::vector <std::string> usuarios = {"luis", "jorge", "james", "johan", "kevin"};
     std::vector <std::string> claves = {"123", "456", "789", "abc", "efg"};
@@ -83,7 +90,8 @@ void inicializarUsuarios() {
     }
 }
 
-// ------------------------------------------------------------------------------------------------|
+// -------------------------- FUNCIONES AUXILIARES PARA INGRESAR DATOS ------------------------------------------------------------------------|
+// -----------------------------------------------------------------------------------------------| >
 
 void escribirLinea(const std::string c) {
     std::cout << std::endl;
@@ -92,7 +100,8 @@ void escribirLinea(const std::string c) {
     std::cout << std::endl;
 } 
 
-// ---------------------------------------------------------------------|
+// -------------------------- FUNCIONES DE VALIDACION -----------------------------------------------------------------------------------------|
+// ---------------------------------------------------------------------| >
 
 bool validarNombre(const std::string usuario) {
     std::ifstream archivo (folderPath + usuario + ".txt");
@@ -108,7 +117,7 @@ bool validarNombre(const std::string usuario) {
     return esValido;
 }
 
-// ---------------------------------------------------------------------|
+// ---------------------------------------------------------------------| >
 
 bool validarGenero(const std::string c) {
     bool esValido = false;
@@ -116,7 +125,8 @@ bool validarGenero(const std::string c) {
     return esValido;
 }
 
-// ---------------------------------------------------------------------|
+// -------------------------- ALGORITMO PARA PEDIR DATOS --------------------------------------------------------------------------------------|
+// ---------------------------------------------------------------------| >
 
 void pedirDatos() {
     // std::cout << "Login de Usuario" << std::endl << std::endl;
@@ -150,8 +160,8 @@ void pedirDatos() {
 
 }
 
-
-// ------------------------------------------------------------------------------------------------|
+// -------------------------- FUNCION MAIN ----------------------------------------------------------------------------------------------------|
+// -----------------------------------------------------------------------------------------------| >
 int main(void) {
     escribirLog();
     inicializarUsuarios();
