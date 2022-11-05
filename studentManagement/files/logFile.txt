@@ -1,189 +1,28 @@
 
 --------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 19:00:50 2022
+Programa iniciado: Sat Nov 05 00:40:45 2022
 
 [INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
 [INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
 [INFO] El usuario: james ya existe -> no se creara un nuevo archivo
 [INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
 [INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+[INFO] antidad de Estudiantes en EXCELENTE: 
+[INFO] Cantidad de Estudiantes en SOBRESALIENTE: 
+[INFO] Cantidad de Estudiantes en REGULAR: 
+[INFO] Cantidad de Estudiantes en INSUFICIENTE: 
+[INFO] Cantidad de Estudiantes en DEFICIENTE: 
 
 --------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 19:01:55 2022
-
-[INFO] Usuario Creado: luis
-[INFO] Usuario Creado: jorge
-[INFO] Usuario Creado: james
-[INFO] Usuario Creado: johan
-[INFO] Usuario Creado: kevin
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 19:02:10 2022
+Programa iniciado: Sat Nov 05 00:43:10 2022
 
 [INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
 [INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
 [INFO] El usuario: james ya existe -> no se creara un nuevo archivo
 [INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
 [INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:05:59 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:06:14 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:07:25 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:08:43 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:08:54 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:14:40 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:16:47 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:16:53 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:17:03 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:17:14 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:18:24 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:18:53 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:20:29 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:27:13 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:29:44 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:31:19 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:31:55 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
-
---------------------------------------------------------------------------------
-Programa iniciado: Fri Nov 04 20:32:26 2022
-
-[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
-[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+[INFO] Cantidad de Estudiantes en EXCELENTE: 1
+[INFO] Cantidad de Estudiantes en SOBRESALIENTE: 0
+[INFO] Cantidad de Estudiantes en REGULAR: 0
+[INFO] Cantidad de Estudiantes en INSUFICIENTE: 0
+[INFO] Cantidad de Estudiantes en DEFICIENTE: 0

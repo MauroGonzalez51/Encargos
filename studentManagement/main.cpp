@@ -17,6 +17,14 @@ struct {
     double notaFinal;
 } estudiantes[cantidadEstudiantes];
 
+struct {
+    int excelente = 0;
+    int sobresaliente = 0;
+    int regular = 0;
+    int insuficiente = 0;
+    int deficiente = 0;
+} categoriasEstudiantes;
+
 // -------------------------- FUNCIONES PARA INICIALIZAR Y ESCRIBIR EN EL LOG -----------------------------------------------------------------|
 // -----------------------------------------------------------------------------------------------| >
 
@@ -144,6 +152,7 @@ bool validarAsignatura(const int asignatura, const int indice) {
 }
 
 // ---------------------------------------------------------------------| >
+
 bool validarNota(const double notaFinal) {
     bool esValido = false;
     if ((notaFinal >= 0.0) && (notaFinal <= 100.0)) esValido = true;
@@ -151,6 +160,7 @@ bool validarNota(const double notaFinal) {
 }
 
 // ---------------------------------------------------------------------| >
+
 bool validarClave(const std::string usuario, const std::string clave) {
     bool esValido = false;
     std::ifstream archivo (folderPath + usuario + ".txt");
@@ -240,11 +250,54 @@ void pedirDatos() {
 
 }
 
+// -------------------------- ANALIZAR DATOS --------------------------------------------------------------------------------------------------|
+// -----------------------------------------------------------------------------------------------| >
+
+void categorizarEstudiante(const double notaFinal) {
+    if (notaFinal <= 30) categoriasEstudiantes.deficiente++;
+    else if (notaFinal <= 60) categoriasEstudiantes.insuficiente++;
+    else if (notaFinal <= 80) categoriasEstudiantes.regular++;
+    else if (notaFinal <= 90) categoriasEstudiantes.sobresaliente++; 
+    else categoriasEstudiantes.excelente++;
+}
+
+// -----------------------------------------------------------------------------------------------| >
+
+double porcentajeAprobacion();
+
+// -----------------------------------------------------------------------------------------------| >
+
+double porcentajeExcelente();
+
+// -----------------------------------------------------------------------------------------------| >
+
+std::string asignaturaMasAprobados();
+
+// -----------------------------------------------------------------------------------------------| >
+
+int estudianteMenorNota();
+
+// -----------------------------------------------------------------------------------------------| >
+
+void analizarDatos() {
+    for (int i = 0; i < cantidadEstudiantes; i++) 
+        categorizarEstudiante(estudiantes[i].notaFinal);
+    
+    escribirLog("Cantidad de Estudiantes en EXCELENTE: " +  std::to_string(categoriasEstudiantes.excelente));
+    escribirLog("Cantidad de Estudiantes en SOBRESALIENTE: " +  std::to_string(categoriasEstudiantes.sobresaliente));
+    escribirLog("Cantidad de Estudiantes en REGULAR: " +  std::to_string(categoriasEstudiantes.regular));
+    escribirLog("Cantidad de Estudiantes en INSUFICIENTE: " +  std::to_string(categoriasEstudiantes.insuficiente));
+    escribirLog("Cantidad de Estudiantes en DEFICIENTE: " +  std::to_string(categoriasEstudiantes.deficiente));
+}
+
 // -------------------------- FUNCION MAIN ----------------------------------------------------------------------------------------------------|
 // -----------------------------------------------------------------------------------------------| >
+
 int main(void) {
     escribirLog();
     inicializarUsuarios();
     pedirDatos();
+    analizarDatos();
+
     return EXIT_SUCCESS;
 }
