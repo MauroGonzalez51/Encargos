@@ -6,12 +6,13 @@
 
 const std::string folderPath = "studentManagement/files/";
 
-const int cantidadEstudiantes = 0;
+const int cantidadEstudiantes = 1;
 
 struct {
     std::string nombre;
     std::string clave;
     std::string genero;
+    std::string nombreAsignatura;
     int asignatura;
     double notaFinal;
 } estudiantes[cantidadEstudiantes];
@@ -125,6 +126,23 @@ bool validarGenero(const std::string c) {
     return esValido;
 }
 
+// ---------------------------------------------------------------------| >
+bool validarAsignatura(const int asignatura, const int indice) {
+    bool esValido = false;
+
+    std::vector <int> opcionesValidas = {1, 2, 3};
+    for (int &i : opcionesValidas) {
+        if (asignatura == i) esValido = true;
+    }
+    
+    if (esValido) {
+        std::vector <std::string> asignaturas = {"Informatica", "Fisica", "Quimica"};
+        estudiantes[indice].nombreAsignatura = asignaturas.at(asignatura - 1);
+    }
+
+    return esValido;
+}
+
 // -------------------------- ALGORITMO PARA PEDIR DATOS --------------------------------------------------------------------------------------|
 // ---------------------------------------------------------------------| >
 
@@ -137,6 +155,7 @@ void pedirDatos() {
         do {
             std::cout << "Estudiante [" << i + 1 << "]" << std::endl;
 
+            // -------------------- NOMBRE --------------------------| >
             do {
                 std::cout << "Ingrese su nombre: ";
                 std::getline(std::cin, estudiantes[i].nombre, '\n');
@@ -145,6 +164,7 @@ void pedirDatos() {
                 else cantidadIntentos--;
             } while ((true) && (cantidadIntentos > 0));
 
+            // -------------------- GENERO --------------------------| >
             do {
                 std::cout << "Ingrese su genero (m/f): ";
                 std::cin >> estudiantes[i].genero;
@@ -152,6 +172,27 @@ void pedirDatos() {
                 if (validarGenero(estudiantes[i].genero)) break;
                 else cantidadIntentos--;
             } while ((true) && (cantidadIntentos > 0));
+
+            // -------------------- ASIGNATURA ----------------------| >
+            std::cout << "Ingrese la asignatura" << std::endl;
+            std::cout << "1. Informatica" << std::endl;
+            std::cout << "2. Fisica" << std::endl;
+            std::cout << "3. Quimica" << std::endl;
+            do {
+                std::cout << "-> ";
+                std::cin >> estudiantes[i].asignatura;
+                
+                if (validarAsignatura(estudiantes[i].asignatura, i)) break;
+            } while ((true) && (cantidadIntentos > 0));
+
+            // -------------------- NOTA FINAL ----------------------| >
+            do {
+                std::cout << "Ingrese su Nota Final: ";
+                std::cin >> estudiantes[i].notaFinal;
+
+
+
+            } while ((true) && (cantidadEstudiantes > 0));
 
             break;
 
