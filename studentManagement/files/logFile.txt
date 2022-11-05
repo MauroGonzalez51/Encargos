@@ -70,3 +70,120 @@ Programa iniciado: Fri Nov 04 20:08:54 2022
 [INFO] El usuario: james ya existe -> no se creara un nuevo archivo
 [INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
 [INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 20:14:40 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 20:16:47 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 20:16:53 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 20:17:03 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 20:17:14 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 20:18:24 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 20:18:53 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 20:20:29 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 20:27:13 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 20:29:44 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 20:31:19 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 20:31:55 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa iniciado: Fri Nov 04 20:32:26 2022
+
+[INFO] El usuario: luis ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: jorge ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: james ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: johan ya existe -> no se creara un nuevo archivo
+[INFO] El usuario: kevin ya existe -> no se creara un nuevo archivo

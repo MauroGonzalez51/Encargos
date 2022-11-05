@@ -143,6 +143,29 @@ bool validarAsignatura(const int asignatura, const int indice) {
     return esValido;
 }
 
+// ---------------------------------------------------------------------| >
+bool validarNota(const double notaFinal) {
+    bool esValido = false;
+    if ((notaFinal >= 0.0) && (notaFinal <= 100.0)) esValido = true;
+    return esValido;
+}
+
+// ---------------------------------------------------------------------| >
+bool validarClave(const std::string usuario, const std::string clave) {
+    bool esValido = false;
+    std::ifstream archivo (folderPath + usuario + ".txt");
+
+    if (archivo.is_open()) {
+        std::string linea, auxClave;
+        std::getline(archivo, linea);
+        std::getline(archivo, auxClave);
+        if (clave == auxClave) esValido = true;
+    }
+
+    return esValido;
+}
+
+
 // -------------------------- ALGORITMO PARA PEDIR DATOS --------------------------------------------------------------------------------------|
 // ---------------------------------------------------------------------| >
 
@@ -163,6 +186,17 @@ void pedirDatos() {
                 if (validarNombre(estudiantes[i].nombre)) break;
                 else cantidadIntentos--;
             } while ((true) && (cantidadIntentos > 0));
+            if (cantidadIntentos < 0) exit(EXIT_FAILURE);
+
+            // -------------------- CLAVE ---------------------------| >
+            do {
+                std::cout << "Ingrese su clave: ";
+                std::getline(std::cin, estudiantes[i].clave, '\n');
+
+                if (validarClave(estudiantes[i].nombre, estudiantes[i].clave)) break;
+                else cantidadIntentos--;
+            } while ((true) && (cantidadIntentos > 0));
+            if (cantidadIntentos < 0) exit(EXIT_FAILURE);
 
             // -------------------- GENERO --------------------------| >
             do {
@@ -172,6 +206,7 @@ void pedirDatos() {
                 if (validarGenero(estudiantes[i].genero)) break;
                 else cantidadIntentos--;
             } while ((true) && (cantidadIntentos > 0));
+            if (cantidadIntentos < 0) exit(EXIT_FAILURE);
 
             // -------------------- ASIGNATURA ----------------------| >
             std::cout << "Ingrese la asignatura" << std::endl;
@@ -181,18 +216,22 @@ void pedirDatos() {
             do {
                 std::cout << "-> ";
                 std::cin >> estudiantes[i].asignatura;
-                
+
                 if (validarAsignatura(estudiantes[i].asignatura, i)) break;
+                else cantidadIntentos--;
             } while ((true) && (cantidadIntentos > 0));
+            if (cantidadIntentos < 0) exit(EXIT_FAILURE);
 
             // -------------------- NOTA FINAL ----------------------| >
             do {
                 std::cout << "Ingrese su Nota Final: ";
                 std::cin >> estudiantes[i].notaFinal;
 
+                if (validarNota(estudiantes[i].notaFinal)) break;
+                else cantidadIntentos--;
+            } while ((true) && (cantidadIntentos > 0));
 
-
-            } while ((true) && (cantidadEstudiantes > 0));
+            if (cantidadIntentos < 0) exit(EXIT_FAILURE);
 
             break;
 
