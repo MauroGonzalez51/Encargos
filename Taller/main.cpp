@@ -1,3 +1,12 @@
+//**    Grupo:
+//**        - María Paula Velasco Aldana - T00068782 - Ingeniería Industrial
+//**        - Ronald Esteban Angarita Arrieta - T00069375 - Ingeniería Industrial
+//**        - Camilo Andrés Vasquez Yepes - T00068241 - Ingeniería quimica
+//**    
+//**    Descripcion:
+//**        - Programa para clasificar estudiantes dependiendo del promedio de cada uno
+//**
+
 #include <bits/stdc++.h>
 
 using namespace std;
