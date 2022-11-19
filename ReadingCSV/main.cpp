@@ -2,13 +2,22 @@
 
 #include <bits/stdc++.h>
 #include "dynamicSorting.h"
+#include "readingFile.h"
 
 const std::string folderPath = "ReadingCSV/files/";
 
-int main(void) {
-    std::vector <float> values = {1.3, 1.7, 2, 5, 3.8, 4.6, 3.9};
-    categorizePeople(values, folderPath);
+// TODO: 
+//   - Read all data and show it UwU
+//   - Create a main function for the categories
 
+struct {
+    std::vector <float> dataVector;
+    std::vector <std::string> dataVectorParseString;
+} dataArrays;
+
+int main(void) {
+    readingFile(dataArrays.dataVector, dataArrays.dataVectorParseString, folderPath);
+    std::cout << dataArrays.dataVector.size() << std::endl;
 
     return EXIT_SUCCESS;
 }
