@@ -1,8 +1,6 @@
 // ! Testing an UwU way to categorize things
 #include <bits/stdc++.h>
 
-std::vector <float> breakpoints = {1, 1.5, 2, 2.5, 3, 3.5, 4.0, 4.5, 5};
-
 // * By this way the ideal is that firstly the breakpoints are created, then the arrays for storing people 
 // * of the categories are created later
 
@@ -10,7 +8,7 @@ std::vector <float> breakpoints = {1, 1.5, 2, 2.5, 3, 3.5, 4.0, 4.5, 5};
 // !Important:
     //  To access all the files, remmember that all of them are named as the breakpoints
 
-void categorizePeople(std::vector <float> dataVector, const std::string folderPath) {
+void categorizePeople(std::vector <float> dataVector, std::vector <float> breakpoints, const std::string folderPath) {
     const std::string categoriesFolderPath = folderPath + "categoryFiles/";
 
     //  Loop to iterates from the end to the beginning of the array given

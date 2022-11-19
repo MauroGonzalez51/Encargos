@@ -1,0 +1,3 @@
+[INFO] Finished reading the file
+[INFO] Finished reading the file
+[INFO] Finished reading the file

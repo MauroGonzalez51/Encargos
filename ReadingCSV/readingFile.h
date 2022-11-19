@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 
-void readingFile(std::vector <float> &dataVector, std::vector <std::string> &dataVectorParseString, const std::string folderPath) {
+bool readingFile(std::vector <float> &dataVector, std::vector <std::string> &dataVectorParseString, const std::string folderPath) {
+    bool success = false;
     std::ifstream dataFile (folderPath + "standard-3dZ.csv");
 
     // Opening the file and saving all the lines in one vector
@@ -19,7 +20,9 @@ void readingFile(std::vector <float> &dataVector, std::vector <std::string> &dat
 
         while (std::getline(streamLine, line, delimiter))
             dataVector.push_back(std::stof(line));
+        success = true;
     }
 
     dataFile.close();
+    return success;
 }
