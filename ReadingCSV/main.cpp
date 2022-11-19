@@ -3,6 +3,7 @@
 #include <bits/stdc++.h>
 #include "dynamicSorting.h"
 #include "readingFile.h"
+#include "createBreakpoints.h"
 #include <chrono>
 
 const std::string folderPath = "ReadingCSV/files/";
@@ -24,7 +25,10 @@ struct {
 void categoriesMain() {
     (readingFile(dataArrays.dataVector, dataArrays.dataVectorParseString, folderPath)) ?
         writeLog("Finished reading the file") : writeLog("Error during reading the file");
-    
+    dataArrays.dataVectorParseString.clear();
+
+    createBreakpoints(dataArrays.dataVector, dataArrays.breakpoints);
+    categorizePeople(dataArrays.dataVector, dataArrays.breakpoints, folderPath);
 }
 
 int main(void) {

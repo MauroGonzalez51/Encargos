@@ -8,7 +8,7 @@
 // !Important:
     //  To access all the files, remmember that all of them are named as the breakpoints
 
-void categorizePeople(std::vector <float> dataVector, std::vector <float> breakpoints, const std::string folderPath) {
+void categorizePeople(std::vector <float> &dataVector, std::vector <float> &breakpoints, const std::string folderPath) {
     const std::string categoriesFolderPath = folderPath + "categoryFiles/";
 
     //  Loop to iterates from the end to the beginning of the array given
