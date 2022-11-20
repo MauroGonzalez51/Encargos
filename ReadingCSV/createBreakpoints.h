@@ -47,10 +47,5 @@ bool createBreakpoints(std::vector <float> &dataVector, std::vector <float> &bre
     for (int interval = 0; interval < nIntervals; interval++) 
         breakpoints.push_back((float) (minValue + (amplitudeIntervals * (interval + 1))));
     
-    // std::cout << "Min Value: " << minValue << std::endl;
-    // std::cout << "Max Value: " << maxValue << std::endl;
-    // for (auto &interval : breakpoints)
-    //     std::cout << interval << std::endl;
-    
     return success;
 }
