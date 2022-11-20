@@ -31,3 +31,13 @@ Program Started at: Sun Nov 20 14:12:50 2022
 [INFO] Breakpoints created succesfully
 [INFO] Files already exits
 [INFO] Program terminated
+[INFO] Mode: 16.200001| 874 time(s)
+
+Program Started at: Sun Nov 20 18:33:16 2022
+
+[INFO] Finished reading the file
+[INFO] Breakpoints created succesfully
+[INFO] Files already exits
+[INFO] Proced to analize data ...
+[INFO] Finding the Mode ...
+[INFO] Mode: 16.200001 | 874 times(s)
