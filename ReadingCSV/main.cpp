@@ -5,6 +5,7 @@
 #include "readingFile.h"
 #include "createBreakpoints.h"
 #include "logFileManagement.h"
+#include "analizeData.h"
 
 const std::string folderPath = "ReadingCSV/files/";
 
@@ -47,13 +48,13 @@ void categoriesMain() {
         categorizePeople(dataArrays.dataVector, dataArrays.breakpoints, folderPath);
     } else {
         writeLog(folderPath, "Files already exits");
-        writeLog(folderPath, "Program terminated");
+        writeLog(folderPath, "Proced to analize data ...");
     }
 }
 
 int main(void) {
     writeLog(folderPath);
     categoriesMain();
-
+    analizeDataMain(dataArrays.dataVector, folderPath);
     return EXIT_SUCCESS;
 }

@@ -16,3 +16,18 @@ Program Started at: Sat Nov 19 19:32:28 2022
 [INFO] Finished reading the file
 [INFO] Breakpoints created succesfully
 [INFO] Categorizing Values ...
+
+Program Started at: Sun Nov 20 12:06:10 2022
+
+[INFO] Finished reading the file
+[INFO] Breakpoints created succesfully
+[INFO] Files already exits
+[INFO] Program terminated
+[INFO] Test Message
+
+Program Started at: Sun Nov 20 14:12:50 2022
+
+[INFO] Finished reading the file
+[INFO] Breakpoints created succesfully
+[INFO] Files already exits
+[INFO] Program terminated
