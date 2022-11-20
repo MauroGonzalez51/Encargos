@@ -17,18 +17,18 @@ void categorizePeople(std::vector <float> &dataVector, std::vector <float> &brea
         //  Check with the value given if it fits in any category -> Looping again
         for (int breakpointManager = 0; breakpointManager < breakpoints.size(); breakpointManager++) {
             
-            //  For every iteration it opens a file name as the breakpoint is checking at the moment
-            std::ofstream categoryFile (categoriesFolderPath + std::to_string(breakpoints.at(breakpointManager)) + ".txt", std::ios::app);
 
             //  The value is a pointer so for accesing the value, it's necesary the "*"
             if (*valueManager <= breakpoints.at(breakpointManager)) {
+                //  For every iteration it opens a file name as the breakpoint is checking at the moment
+                std::ofstream categoryFile (categoriesFolderPath + std::to_string(breakpoints.at(breakpointManager)) + ".txt", std::ios::app);
                 
                 // * Write it into the file -> with the "," for upcoming values 
                 categoryFile << *valueManager << ",";
+                categoryFile.close();
                 break;
             }
 
-            categoryFile.close();
         }
     }
 }

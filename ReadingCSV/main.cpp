@@ -43,8 +43,8 @@ void categoriesMain() {
 
     if (!filesExits()) {
         deletePreviousInfo();
-        categorizePeople(dataArrays.dataVector, dataArrays.breakpoints, folderPath);
         writeLog(folderPath, "Categorizing Values ...");
+        categorizePeople(dataArrays.dataVector, dataArrays.breakpoints, folderPath);
     } else {
         writeLog(folderPath, "Files already exits");
         writeLog(folderPath, "Program terminated");

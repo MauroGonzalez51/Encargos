@@ -4,3 +4,15 @@ Program Started at: Sat Nov 19 19:17:00 2022
 [INFO] Finished reading the file
 [INFO] Breakpoints created succesfully
 [INFO] Files already exits
+
+Program Started at: Sat Nov 19 19:23:40 2022
+
+[INFO] Finished reading the file
+[INFO] Breakpoints created succesfully
+[INFO] Categorizing Values ...
+
+Program Started at: Sat Nov 19 19:32:28 2022
+
+[INFO] Finished reading the file
+[INFO] Breakpoints created succesfully
+[INFO] Categorizing Values ...
