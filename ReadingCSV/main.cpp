@@ -55,6 +55,6 @@ void categoriesMain() {
 int main(void) {
     writeLog(folderPath);
     categoriesMain();
-    analizeDataMain(dataArrays.dataVector, folderPath);
+    analizeDataMain(dataArrays.breakpoints, folderPath);
     return EXIT_SUCCESS;
 }
