@@ -5,6 +5,11 @@ struct Paciente {
     int edad, intGenero, tipoExamen;
     float estatura, peso;
     char charGenero;
+
+    struct {
+        float frecuenciaCardiaca, presionSistolica, precionDiastolica, IMC;
+        std::string factorDeRiesgo;
+    } datosMedicos;
 };
 
 #include "llenarDatos.h"

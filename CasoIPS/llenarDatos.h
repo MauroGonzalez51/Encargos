@@ -8,11 +8,11 @@ bool validarNumeroIdentificacion(const std::string numeroIdentificacion) { retur
 
 bool validarNombre(const std::string nombrePaciente) { return ((nombrePaciente.size() > 30) ? true : false); }
 
-bool validarEdad(const int edadPaciente) { return ((edadPaciente < 0) ? true : false ); }
+// bool validarEdad(const int edadPaciente) { return ((edadPaciente < 0) ? true : false ); }
 
-bool validarEstatura(const float estaturaPaciente) { return ((estaturaPaciente < 0) ? true : false); }
+// bool validarEstatura(const float estaturaPaciente) { return ((estaturaPaciente < 0) ? true : false); }
 
-bool validarPeso(const float pesoPaciente) { return ((pesoPaciente < 0.0) ? true : false); }
+// bool validarPeso(const float pesoPaciente) { return ((pesoPaciente < 0.0) ? true : false); }
 
 bool validarGenero(const int intGenero) {
     bool esValido = false;
@@ -29,12 +29,38 @@ void intToCharGenero(struct Paciente &paciente) {
 
 bool validarCodigoEmpresa(const std::string codigoEmpresa) { return ((codigoEmpresa.size() > 4) ? true : false); }
 
+// bool validarFrecuenciaCardiaca(const float frecuenciaCardiaca) { return ((frecuenciaCardiaca < 0) ? true : false); }
+
+template <class custom>
+bool validarValorMenorCero(custom valor) { return ((valor < 0) ? true : false); }
+
+bool validarEnRango(float valor, int rangoMinimo, int rangoMaximo) { return (((valor >= rangoMinimo) && (valor <= rangoMaximo)) ? true : false); }
+
+// -----------------------------------------------------------------------------------------------------------------------------------------------|
+
+float calcularIMC(const float peso, const float estatura) { return (peso / (pow(estatura, 2))); }
+
+std::string calcularFactorDeRiesgo(const float IMC, const float presionSistolica, const float presionDiastolica, const int edadPaciente, const float frecuenciaCardiaca) {
+    std::string factorRiesgo;
+    
+    // ------ RIESGO BAJO ------|>
+    if ((IMC < 25) && (frecuenciaCardiaca <= 80) && (validarEnRango(presionSistolica, 0, 140)) && (validarEnRango(presionDiastolica, 0, 80))) factorRiesgo = "RIESGO-BAJO";
+
+    // ------ RIESGO MEDIO -----|> 
+    if ((edadPaciente <= 40) && ((validarEnRango(IMC, 25, 32)) || (frecuenciaCardiaca > 80) || (validarEnRango(presionSistolica, 0, 140)) || (validarEnRango(presionDiastolica, 0, 80)))) factorRiesgo = "RIESGO-MEDIO";
+
+    // ------ RIESGO ALTO ------|>
+    if ((edadPaciente > 40) && (IMC > 32) && (frecuenciaCardiaca > 80) && (validarEnRango(presionSistolica, 0, 140)) && (validarEnRango(presionDiastolica, 0, 80))) factorRiesgo = "RIESGO-ALTO";
+
+    return factorRiesgo;
+}
+
 // -----------------------------------------------------------------------------------------------------------------------------------------------|
 
 void llenarStruct(struct Paciente &paciente) {
     std::cout << std::endl;
 
-    // ---------------------------------- NUMERO IDENTIFICACION---------------------------------------------| >
+    // ---------------------------------- NUMERO IDENTIFICACION---------------------------------------------|>
 
     // do {
     //     std::cout << "Ingrese su numero de Identificacion: ";
@@ -46,7 +72,7 @@ void llenarStruct(struct Paciente &paciente) {
 
     // clearBuffers();
 
-    // ---------------------------------- NOMBRE------------------------------------------------------------| >
+    // ---------------------------------- NOMBRE------------------------------------------------------------|>
 
     // do {
     //     std::cout << "Ingrese su nombre: ";
@@ -58,43 +84,43 @@ void llenarStruct(struct Paciente &paciente) {
 
     // clearBuffers();
 
-    // ---------------------------------- EDAD--------------------------------------------------------------| >
+    // ---------------------------------- EDAD--------------------------------------------------------------|>
 
-    // do {
-    //     std::cout << "Ingrese su edad: ";
-    //     std::cin >> paciente.edad;
+    do {
+        std::cout << "Ingrese su edad: ";
+        std::cin >> paciente.edad;
 
-    //     if (!validarEdad(paciente.edad)) break;
-    //     else std::cout << "Error: Valor Incorrecto Ingresado" << std::endl;
-    // } while (true);
+        if (!validarValorMenorCero(paciente.edad)) break;
+        else std::cout << "Error: Valor Incorrecto Ingresado" << std::endl;
+    } while (true);
 
-    // clearBuffers();
+    clearBuffers();
 
-    // ---------------------------------- ESTATURA ---------------------------------------------------------| >
+    // ---------------------------------- ESTATURA ---------------------------------------------------------|>
 
-    // do {
-    //     std::cout << "Ingrese su Estatura {Metros}: ";
-    //     std::cin >> paciente.estatura;
+    do {
+        std::cout << "Ingrese su Estatura {Metros}: ";
+        std::cin >> paciente.estatura;
 
-    //     if (!validarEstatura(paciente.estatura)) break;
-    //     else std::cout << "Error: El valor Ingresado debe ser mayor a 0" << std::endl;
-    // } while (true);
+        if (!validarValorMenorCero(paciente.estatura)) break;
+        else std::cout << "Error: El valor Ingresado debe ser mayor a 0" << std::endl;
+    } while (true);
 
-    // clearBuffers();
+    clearBuffers();
 
-    // ---------------------------------- PESO -------------------------------------------------------------| >
+    // ---------------------------------- PESO -------------------------------------------------------------|>
 
-    // do {
-    //     std::cout << "Ingrese su peso {Kilogramos}: ";
-    //     std::cin >> paciente.peso;
+    do {
+        std::cout << "Ingrese su peso {Kilogramos}: ";
+        std::cin >> paciente.peso;
 
-    //     if (!validarPeso(paciente.peso)) break;
-    //     else std::cout << "Error: El peso ingresado debe ser mayor a 0" << std::endl;
-    // } while (true);
+        if (!validarValorMenorCero(paciente.peso)) break;
+        else std::cout << "Error: El peso ingresado debe ser mayor a 0" << std::endl;
+    } while (true);
 
-    // clearBuffers();
+    clearBuffers();
 
-    // ---------------------------------- GENERO -----------------------------------------------------------| >
+    // ---------------------------------- GENERO -----------------------------------------------------------|>
 
     // std::cout << "Ingrese su Genero: " << std::endl;
     // std::cout << "1. Masculino" << std::endl;
@@ -112,7 +138,7 @@ void llenarStruct(struct Paciente &paciente) {
 
     // intToCharGenero(paciente);
 
-    // ---------------------------------- CODIGO EMPRESA REMISORA -------------------------------------------| >
+    // ---------------------------------- CODIGO EMPRESA REMISORA -------------------------------------------|>
 
     // do {
     //     std::cout << "Ingrese el codigo de la Empresa Remisora: ";
@@ -124,7 +150,7 @@ void llenarStruct(struct Paciente &paciente) {
 
     // clearBuffers();
 
-    // ---------------------------------- FECHA EXAMEN -----------------------------------------------------| >
+    // ---------------------------------- FECHA EXAMEN -----------------------------------------------------|>
 
     std::cout << "Fecha de realizacion del examen" << std::endl;
 
@@ -147,21 +173,49 @@ void llenarStruct(struct Paciente &paciente) {
     paciente.fechaExamen = (std::string) (std::to_string(diaExamen) + "-" + std::to_string(mesExamen) + "-" + std::to_string(anioExamen));
     
     clearBuffers();
+
+    // ---------------------------------- FRECUENCIA CARDIACA ----------------------------------------------|>
     
+    do {
+        std::cout << "Ingrese su Frecuencia cardiaca {PPM}: ";
+        std::cin >> paciente.datosMedicos.frecuenciaCardiaca;
 
+        if (!validarValorMenorCero(paciente.datosMedicos.frecuenciaCardiaca)) break;
+        else std::cout << "Error: El numero debe ser mayor a 0" << std::endl;
+    } while (true);
+
+    clearBuffers();
     
+    // ---------------------------------- FRECUENCIA CARDIACA ----------------------------------------------|>
+
+    std::cout << "Presion Arterial" << std::endl;
+
+    do {
+        std::cout << "Ingrese el valor de Presion Sistolica: ";
+        std::cin >> paciente.datosMedicos.presionSistolica;
+
+        if (!validarValorMenorCero(paciente.datosMedicos.presionSistolica)) break;
+        else std::cout << "Error: El valor debe ser mayor a 0" << std::endl;
+    } while (true);
 
 
+    do {
+        std::cout << "Ingrese el valor de Presion Diastolica: ";
+        std::cin >> paciente.datosMedicos.precionDiastolica;
 
+        if (!validarValorMenorCero(paciente.datosMedicos.precionDiastolica)) break;
+        else std::cout << "Error: El valor debe ser mayor a 0" << std::endl;
+    } while (true);
 
+    clearBuffers();
 
+    // --------------------------------------------------------|>
 
-
-
-
-
-
-
-
-
+    paciente.datosMedicos.IMC = calcularIMC(paciente.peso, paciente.estatura);
+    paciente.datosMedicos.factorDeRiesgo = calcularFactorDeRiesgo(
+        paciente.datosMedicos.IMC, 
+        paciente.datosMedicos.presionSistolica, 
+        paciente.datosMedicos.precionDiastolica, 
+        paciente.edad, 
+        paciente.datosMedicos.frecuenciaCardiaca);
 }
