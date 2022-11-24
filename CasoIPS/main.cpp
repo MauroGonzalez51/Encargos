@@ -63,7 +63,7 @@ void mainMenu() {
 } 
 
 int main(void) {
-    // mainMenu();
+    mainMenu();
     analizarDatos();
     return EXIT_SUCCESS;
 }
