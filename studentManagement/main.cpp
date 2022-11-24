@@ -5,7 +5,7 @@
 
 const std::string folderPath = "studentManagement/files/";
 
-const int cantidadEstudiantes = 1;
+const int cantidadEstudiantes = 5;
 
 struct {
     std::string nombre;
