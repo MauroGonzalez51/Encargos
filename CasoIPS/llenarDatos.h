@@ -22,12 +22,20 @@ bool validarGenero(const int intGenero) {
     return esValido;
 }
 
-void intToCharGenero(struct Paciente &paciente) {
-    std::vector <char> generos = {'M', 'F'};
-    paciente.charGenero = generos.at(paciente.intGenero - 1);
+void intToStringGenero(struct Paciente &paciente) {
+    std::vector <std::string> generos = {"M", "F"};
+    paciente.stringGenero = generos.at(paciente.intGenero - 1);
 }
 
 bool validarCodigoEmpresa(const std::string codigoEmpresa) { return ((codigoEmpresa.size() > 4) ? true : false); }
+
+bool validarTipoExamen(const int opcionEscogida) {
+    bool esValido = false;
+    std::vector <int> opcionesValidas = {1, 2, 3};
+    for (auto &opcion : opcionesValidas)
+        if (opcionEscogida == opcion) esValido = true;
+    return esValido;
+}
 
 // bool validarFrecuenciaCardiaca(const float frecuenciaCardiaca) { return ((frecuenciaCardiaca < 0) ? true : false); }
 
@@ -62,27 +70,27 @@ void llenarStruct(struct Paciente &paciente) {
 
     // ---------------------------------- NUMERO IDENTIFICACION---------------------------------------------|>
 
-    // do {
-    //     std::cout << "Ingrese su numero de Identificacion: ";
-    //     std::cin >> paciente.numeroIdentificacion;
+    do {
+        std::cout << "Ingrese su numero de Identificacion: ";
+        std::cin >> paciente.numeroIdentificacion;
 
-    //     if (!validarNumeroIdentificacion(paciente.numeroIdentificacion)) break;
-    //     else std::cout << "Error: El no. de identificacion debe de tener un maximo de 10 Caracteres" << std::endl;
-    // } while (true);
+        if (!validarNumeroIdentificacion(paciente.numeroIdentificacion)) break;
+        else std::cout << "Error: El no. de identificacion debe de tener un maximo de 10 Caracteres" << std::endl;
+    } while (true);
 
-    // clearBuffers();
+    clearBuffers();
 
     // ---------------------------------- NOMBRE------------------------------------------------------------|>
 
-    // do {
-    //     std::cout << "Ingrese su nombre: ";
-    //     std::getline(std::cin, paciente.nombrePaciente, '\n');
+    do {
+        std::cout << "Ingrese su nombre: ";
+        std::getline(std::cin, paciente.nombrePaciente, '\n');
 
-    //     if (!validarNombre(paciente.nombrePaciente)) break;
-    //     else std::cout << "Error: El maximo de caracteres es 30" << std::endl;
-    // } while (true);
+        if (!validarNombre(paciente.nombrePaciente)) break;
+        else std::cout << "Error: El maximo de caracteres es 30" << std::endl;
+    } while (true);
 
-    // clearBuffers();
+    clearBuffers();
 
     // ---------------------------------- EDAD--------------------------------------------------------------|>
 
@@ -122,35 +130,47 @@ void llenarStruct(struct Paciente &paciente) {
 
     // ---------------------------------- GENERO -----------------------------------------------------------|>
 
-    // std::cout << "Ingrese su Genero: " << std::endl;
-    // std::cout << "1. Masculino" << std::endl;
-    // std::cout << "2. Femenino" << std::endl;
+    std::cout << "Ingrese su Genero: " << std::endl;
+    std::cout << "1. Masculino" << std::endl;
+    std::cout << "2. Femenino" << std::endl;
 
-    // do {
-    //     std::cout << "-> ";
-    //     std::cin >> paciente.intGenero;
+    do {
+        std::cout << "-> ";
+        std::cin >> paciente.intGenero;
 
-    //     if (validarGenero(paciente.intGenero)) break;
-    //     else std::cout << "Error: Ingrese una opcion valida" << std::endl;
-    // } while (true);
+        if (validarGenero(paciente.intGenero)) break;
+        else std::cout << "Error: Ingrese una opcion valida" << std::endl;
+    } while (true);
 
-    // clearBuffers();
+    clearBuffers();
 
-    // intToCharGenero(paciente);
+    intToStringGenero(paciente);
 
     // ---------------------------------- CODIGO EMPRESA REMISORA -------------------------------------------|>
 
-    // do {
-    //     std::cout << "Ingrese el codigo de la Empresa Remisora: ";
-    //     std::cin >> paciente.codigoEmpresa;
+    do {
+        std::cout << "Ingrese el codigo de la Empresa Remisora: ";
+        std::cin >> paciente.codigoEmpresa;
 
-    //     if (!validarCodigoEmpresa(paciente.codigoEmpresa)) break;
-    //     else std::cout << "Error: El codigo debe tener un maximo de 4 digitos" << std::endl;
-    // } while (true);
+        if (!validarCodigoEmpresa(paciente.codigoEmpresa)) break;
+        else std::cout << "Error: El codigo debe tener un maximo de 4 digitos" << std::endl;
+    } while (true);
 
-    // clearBuffers();
+    clearBuffers();
 
-    // ---------------------------------- FECHA EXAMEN -----------------------------------------------------|>
+    // ---------------------------------- TIPO EXAMEN -------------------------------------------------------|>
+
+    do {
+        std::cout << "Ingrese el tipo de examen: ";
+        std::cin >> paciente.tipoExamen;
+
+        if (validarTipoExamen(paciente.tipoExamen)) break;
+        else std::cout << "Error: Ingrese una opcion valida" << std::endl;
+    } while (true);
+
+    clearBuffers();
+
+    // ---------------------------------- FECHA EXAMEN ------------------------------------------------------|>
 
     std::cout << "Fecha de realizacion del examen" << std::endl;
 
@@ -188,7 +208,7 @@ void llenarStruct(struct Paciente &paciente) {
     
     // ---------------------------------- FRECUENCIA CARDIACA ----------------------------------------------|>
 
-    std::cout << "Presion Arterial" << std::endl;
+    std::cout << std::endl << "Presion Arterial" << std::endl;
 
     do {
         std::cout << "Ingrese el valor de Presion Sistolica: ";

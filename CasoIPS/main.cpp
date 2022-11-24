@@ -4,7 +4,7 @@ struct Paciente {
     std::string numeroIdentificacion, nombrePaciente, codigoEmpresa, fechaExamen = "";
     int edad, intGenero, tipoExamen;
     float estatura, peso;
-    char charGenero;
+    std::string stringGenero;
 
     struct {
         float frecuenciaCardiaca, presionSistolica, precionDiastolica, IMC;
@@ -40,6 +40,8 @@ bool validarMensaje(char msg[3]) {
 }
 
 void clearBuffers() { fflush(stdin); }
+void tabularDatos(Paciente &paciente);
+void analizarDatos();
 
 void mainMenu() {
     escribirLinea(50, "*");
@@ -48,6 +50,7 @@ void mainMenu() {
     do {
         Paciente paciente;
         llenarStruct(paciente);
+        tabularDatos(paciente);
         char msg[3];
         std::cout << "Desea agregar otro paciente?" << std::endl;
         std::cout << "-> ";
@@ -61,7 +64,6 @@ void mainMenu() {
 
 int main(void) {
     mainMenu();
-
-
+    analizarDatos();
     return EXIT_SUCCESS;
 }

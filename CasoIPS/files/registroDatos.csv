@@ -1,0 +1,3 @@
+numeroIdentificacion;nombrePaciente;codigoEmpresa;tipoExamen;fechaExamen;edad;genero;estatura;peso;frecuenciaCardiaca;presionSistolica;presionDiastolica;IMC;factorDeRiesgo
+12345;MauroAlonso;T000;5;12-12-2004;17;M;1.690000;60.000000;87.000000;67.000000;90.000000;21.007666;RIESGO-MEDIO
+87646;Mauro Gonzalez;T000;1;7-4-2004;17;M;1.690000;60.000000;56.000000;45.000000;80.000000;21.007666;RIESGO-MEDIO
