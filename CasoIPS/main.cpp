@@ -14,7 +14,7 @@ struct Paciente {
 
 #include "llenarDatos.h"
 #include "registroDatos.h"
-
+#include "analisisDatos.h"
 
 void escribirLinea(const int n, const std::string c) {
     std::cout << std::endl;
@@ -63,7 +63,7 @@ void mainMenu() {
 } 
 
 int main(void) {
-    mainMenu();
+    // mainMenu();
     analizarDatos();
     return EXIT_SUCCESS;
 }
