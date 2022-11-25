@@ -4,7 +4,7 @@ std::ofstream registroDatos ("CasoIPS/files/registroDatos.csv", std::ios::app);
 
 void tabularDatos(Paciente &paciente) {
     if (registroDatos.is_open()) {
-        registroDatos << std::endl << paciente.numeroIdentificacion << ";"
+        registroDatos << paciente.numeroIdentificacion << ";"
             << paciente.nombrePaciente << ";"
             << paciente.codigoEmpresa << ";"
             << std::to_string(paciente.tipoExamen) << ";"
