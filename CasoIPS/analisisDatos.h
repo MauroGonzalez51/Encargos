@@ -80,7 +80,7 @@ struct {
 
 bool crearArchivoEmpresa(const std::string nombreEmpresa) {
     bool success = false;
-    if (std::filesystem::exists("CasoIPS/files/EMPRESA-" + nombreEmpresa + ".txt")) {
+    if (!std::filesystem::exists("CasoIPS/files/EMPRESA-" + nombreEmpresa + ".txt")) {
         std::ofstream archivoEmpresa ("CasoIPS/files/EMPRESA-" + nombreEmpresa + ".txt", std::ios::app);
         if (archivoEmpresa.good()) success = true;
         archivoEmpresa.close();
@@ -98,7 +98,7 @@ void analisisPorEmpresa() {
 
         for (int i = 0; i < allDatos.identificacionPacientes.size(); i++) {
             if (allDatos.codigoEmpresasRemitorasVECTOR.at(i) == dato) {
-                if (crearArchivoEmpresa(dato)) {
+                if (!crearArchivoEmpresa(dato)) {
                     pacientesEvaluados++;
 
                     if (allDatos.generoPacientes.at(i) == "M") {
