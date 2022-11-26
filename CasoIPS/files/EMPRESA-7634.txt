@@ -1,0 +1,13 @@
+
+
+Nombre EMPRESA: 7634
+Cantidad de Pacientes Evaluados: 0
+Porcentaje de Hombres Evaluados: 0.000000%
+Porcentaje de Mujeres Evaluadas: 0.000000%
+Edad Promedio
+Hombres: 0.000000
+Mujeres: 0.000000
+
+Pacientes Riesgo BAJO: 0
+Pacientes Riesgo MEDIO: 0
+Pacientes Riesgo ALTO: 0

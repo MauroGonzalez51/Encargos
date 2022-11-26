@@ -1,6 +1,6 @@
 
 
-Nombre EMPRESA: 8925
+Nombre EMPRESA: 8945
 Cantidad de Pacientes Evaluados: 0
 Porcentaje de Hombres Evaluados: 0.000000%
 Porcentaje de Mujeres Evaluadas: 0.000000%
@@ -13,12 +13,12 @@ Pacientes Riesgo MEDIO: 0
 Pacientes Riesgo ALTO: 0
 
 
-Nombre EMPRESA: 8925
+Nombre EMPRESA: 8945
 Cantidad de Pacientes Evaluados: 1
 Porcentaje de Hombres Evaluados: 100.000000%
 Porcentaje de Mujeres Evaluadas: 0.000000%
 Edad Promedio
-Hombres: 25.000000
+Hombres: 39.000000
 Mujeres: 0.000000
 
 Pacientes Riesgo BAJO: 0
@@ -26,12 +26,12 @@ Pacientes Riesgo MEDIO: 1
 Pacientes Riesgo ALTO: 0
 
 
-Nombre EMPRESA: 8925
+Nombre EMPRESA: 8945
 Cantidad de Pacientes Evaluados: 1
 Porcentaje de Hombres Evaluados: 100.000000%
 Porcentaje de Mujeres Evaluadas: 0.000000%
 Edad Promedio
-Hombres: 25.000000
+Hombres: 39.000000
 Mujeres: 0.000000
 
 Pacientes Riesgo BAJO: 0
@@ -39,12 +39,12 @@ Pacientes Riesgo MEDIO: 1
 Pacientes Riesgo ALTO: 0
 
 
-Nombre EMPRESA: 8925
+Nombre EMPRESA: 8945
 Cantidad de Pacientes Evaluados: 1
 Porcentaje de Hombres Evaluados: 100.000000%
 Porcentaje de Mujeres Evaluadas: 0.000000%
 Edad Promedio
-Hombres: 25.000000
+Hombres: 39.000000
 Mujeres: 0.000000
 
 Pacientes Riesgo BAJO: 0

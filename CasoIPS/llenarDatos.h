@@ -49,7 +49,7 @@ bool validarEnRango(float valor, int rangoMinimo, int rangoMaximo) { return (((v
 float calcularIMC(const float peso, const float estatura) { return (peso / (pow(estatura, 2))); }
 
 std::string calcularFactorDeRiesgo(const float IMC, const float presionSistolica, const float presionDiastolica, const int edadPaciente, const float frecuenciaCardiaca) {
-    std::string factorRiesgo;
+    std::string factorRiesgo = "NULL";
     
     // ------ RIESGO BAJO ------|>
     if ((IMC < 25) && (frecuenciaCardiaca <= 80) && (validarEnRango(presionSistolica, 0, 140)) && (validarEnRango(presionDiastolica, 0, 80))) factorRiesgo = "RIESGO-BAJO";

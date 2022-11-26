@@ -64,6 +64,7 @@ void mainMenu() {
 
 int main(void) {
     mainMenu();
+    std::cout << "Procediendo a hacer el analisis de datos" << std::endl;
     analizarDatos();
     return EXIT_SUCCESS;
 }
