@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <ctype.h>
 
 using namespace std;
 
@@ -81,26 +82,33 @@ bool crearOrden(string nombreCliente, int cantidadOrdenada, int identificadorPro
 void hacerPedido() {
     verInventario();
     escribirLinea("/");
-    string nombreCliente;
-    int cantidadOrdenada, identificadorProducto;
 
-    cout << "Ingrese su nombre: ";
-    cin >> nombreCliente;
+    if (Inventario.nombreProductos.size() != 0) {
+        string nombreCliente;
+        int cantidadOrdenada, identificadorProducto;
 
-    cout << "Ingrese el identificador del producto: ";
-    cin >> identificadorProducto;
+        cout << "Ingrese su nombre: ";
+        cin >> nombreCliente;
 
-    cout << "Ingrese la cantidad deseada: ";
-    cin >> cantidadOrdenada;
+        cout << "Ingrese el identificador del producto: ";
+        cin >> identificadorProducto;
 
-    (crearOrden(nombreCliente, cantidadOrdenada, identificadorProducto)) ? 
-        cout << std::endl << "Orden realizada Correctamente" << std::endl :
-            cout << std::endl << "Error al momento de realizar la orden" << std::endl;
+        cout << "Ingrese la cantidad deseada: ";
+        cin >> cantidadOrdenada;
+
+        (crearOrden(nombreCliente, cantidadOrdenada, identificadorProducto)) ? 
+            cout << std::endl << "Orden realizada Correctamente" << std::endl :
+                cout << std::endl << "Error al momento de realizar la orden" << std::endl;
+    } else {
+        cout << endl << "Procediendo a agregar productos primero" << endl;
+        escribirLinea("*");
+        agregarProducto();
+    }
 }
 
-int mainMenuDashboard() {
+char mainMenuDashboard() {
     escribirLinea("-");
-    int opcion;
+    char opcion;
     cout << "1. Ver Inventario" << std::endl;
     cout << "2. Agregar a Inventario" << std::endl;
     cout << "3. Hacer un Pedido" << std::endl;
@@ -111,28 +119,21 @@ int mainMenuDashboard() {
     return opcion;
 }
 
+bool verificarOpcion(const char opcion) {
+    return (isalpha(opcion)) ? true : false;
+}
+
 void mainMenu() {
     do {
-        switch(mainMenuDashboard()) {
-            case 1: {
-                verInventario();
-                break;
-            }
-
-            case 2: {
-                agregarProducto();
-                break;
-            }
-
-            case 3: {
-                hacerPedido();
-                break;
-            }
-
-            default:
-                exit(EXIT_FAILURE);
+        char opcion = mainMenuDashboard();
+        if (verificarOpcion(opcion)) 
+            cout << endl << "Ingrese una opcion valida" << endl;
+        else {
+            if (opcion == '1') verInventario(); 
+            else if (opcion == '2') agregarProducto();
+            else if (opcion == '3') hacerPedido();
+            else exit(EXIT_FAILURE);
         }
-
     } while (true);
 }
 
