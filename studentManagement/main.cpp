@@ -5,7 +5,7 @@
 
 const std::string folderPath = "studentManagement/files/";
 
-const int cantidadEstudiantes = 5;
+const int cantidadEstudiantes = 1;
 
 std::vector <std::string> asignaturasGeneral = {"Informatica", "Fisica", "Quimica"};
 
@@ -18,21 +18,16 @@ struct {
 struct {
     std::string nombre;
     std::string codigo;
-    std::array <float> notasFinales;
+    std::array <float, 3> notasFinales;
+    std::vector <std::string> categoriaPorAsignatura;
 } estudiantes[cantidadEstudiantes];
 
-struct {
-    int excelente = 0;
-    int sobresaliente = 0;
-    int regular = 0;
-    int insuficiente = 0;
-    int deficiente = 0;
-} categoriasEstudiantes;
+std::vector <std::string> nombreCategorias = {"Deficiente", "Insuficiente", "Regular", "Sobresaliente", "Excelente"};
 
 // ------------------------------ FUNCIONES PARA INICIALIZAR Y ESCRIBIR EN EL LOG ----------------------------------|>
 //-------------------------------------------------------------------------|>
 
-std::ofstream logFile (folderPath + "logFile", std::ios::app);
+std::ofstream logFile (folderPath + "logFile.txt", std::ios::app);
 
 //-------------------------------------------------------------------------|>
 
@@ -134,13 +129,24 @@ bool validarUsuarioProfesor(const std::string usuario) {
     return esValido;
 }
 
+//-------------------------------------------------------------------------|>
 
-
+bool validarClaveProfesor(const std::string usuario, const std::string clave) {
+    std::ifstream archivo (folderPath + usuario + ".txt");
+    bool esValido = false;
+    if (archivo.is_open()) {
+        std::string dummyItem, auxClave;
+        std::getline(archivo, dummyItem);
+        std::getline(archivo, auxClave);
+        if (clave == auxClave) esValido = true;
+    }
+    return esValido;
+}
 
 // ------------------------------ DATOS PROFESOR -------------------------------------------------------------------|>
 //-------------------------------------------------------------------------|>
 
-void datosProfesor() {
+void datosProfesorMain() {
     escribirLinea("/");
     std::cout << "[PROFESOR]" << std::endl;
 
@@ -153,17 +159,17 @@ void datosProfesor() {
             if (validarUsuarioProfesor(datosProfesor.nombre)) break;
             else datosProfesor.cantidadIntentos--;
         } while ((true) && (datosProfesor.cantidadIntentos > 0));
-        if (cantidadIntentos < 0) exit(EXIT_FAILURE);
+        if (datosProfesor.cantidadIntentos < 0) exit(EXIT_FAILURE);
 
         // ------------- CONTRASEÑA ----------------------------------------|>
         do {
             std::cout << "Ingrese su clave: ";
             std::cin >> datosProfesor.clave;
 
-            if (validarClaveProfesor(datosProfesor.clave)) break;
+            if (validarClaveProfesor(datosProfesor.nombre, datosProfesor.clave)) break;
             else datosProfesor.cantidadIntentos--;
         } while ((true) && (datosProfesor.cantidadIntentos > 0));
-        if (cantidadIntentos < 0) exit(EXIT_FAILURE);
+        if (datosProfesor.cantidadIntentos < 0) exit(EXIT_FAILURE);
         break;
     } while (datosProfesor.cantidadIntentos > 0);
 }
@@ -171,31 +177,29 @@ void datosProfesor() {
 // ------------------------------ DATOS ESTUDIANTES ----------------------------------------------------------------|>
 //-------------------------------------------------------------------------|>
 
-void datosEstudiantes {
+void datosEstudiantes() {
     std::cout << "[ESTUDIANTES]" << std::endl;
 
     for (int i = 0; i < cantidadEstudiantes; i++) {
-        
+        std::cout << std::endl;
         // ---------------- NOMBRE -------------------------|>
         do {
-            std::cout << "{Estudiante " << i + 1 << "} Ingrese su nombre: ";
+            std::cout << "[Estudiante " << i + 1 << "] Ingrese su nombre: ";
             std::cin >> estudiantes[i].nombre;
         } while (estudiantes[i].nombre.empty());
 
         // ---------------- CODIGO -------------------------|>
         do {
-            std::cout << "{Estudiante " << i + 1 << "} Ingrese su codigo: ";
+            std::cout << "[Estudiante " << i + 1 << "] Ingrese su codigo: ";
             std::cin >> estudiantes[i].codigo;
-        } while (estudiantes[i].codigo);
+        } while (estudiantes[i].codigo.empty());
 
         // ---------------- NOTAS FINALES ------------------|>
         for (int asignatura = 0; asignatura < estudiantes[i].notasFinales.size(); asignatura++) {
-            float notaAux;
             do {
-                std::cout << "{Estudiante " << i + 1 << "} {Asignatura " << asignaturasGeneral.at(asignatura) << "} Ingrese su nota: ";
-                std::cin >> notaAux;
-            } while (notaAux < 0.0);
-            estudiantes[i].notasFinales.push_back(notaAux);               
+                std::cout << "[Estudiante " << i + 1 << "] [Asignatura " << asignaturasGeneral.at(asignatura) << "] Ingrese su nota: ";
+                std::cin >> estudiantes[i].notasFinales.at(asignatura);
+            } while ((estudiantes[i].notasFinales.at(asignatura) < 0.0) || (estudiantes[i].notasFinales.at(asignatura) > 100.0));              
         }
     }
 }
@@ -203,14 +207,68 @@ void datosEstudiantes {
 // ------------------------------ ANALISIS DE DATOS ----------------------------------------------------------------|>
 //-------------------------------------------------------------------------|>
 
+void limpiarArchivosCategorias() {
+    for (int i = 0; i < nombreCategorias.size(); i++) {
+        std::filesystem::remove(folderPath + nombreCategorias.at(i));
+    }
+}
 
+std::string categorizarEstudiante(const double notaFinal, const std::string asignatura, const std::string codigoEstudiante) {
+    // if (notaFinal <= 30) categoriasEstudiantes.deficiente++;
+    // else if (notaFinal <= 60) categoriasEstudiantes.insuficiente++;
+    // else if (notaFinal <= 80) categoriasEstudiantes.regular++;
+    // else if (notaFinal <= 90) categoriasEstudiantes.sobresaliente++; 
+    // else categoriasEstudiantes.excelente++;
 
+    std::string returnStatement;
+
+    std::vector <int> puntosDeCorte = {30, 60, 80, 90, 100};
+
+    for (int i = 0; i < puntosDeCorte.size(); i++) {
+        if (notaFinal <= puntosDeCorte.at(i)) {
+            std::ofstream archivoCategorias (folderPath + nombreCategorias.at(i), std::ios::app);
+            returnStatement = nombreCategorias.at(i);
+            if (archivoCategorias.is_open()) {
+                archivoCategorias << std::endl;
+                archivoCategorias << "Codigo Estudiante: " << codigoEstudiante << std::endl;
+                archivoCategorias << "Asignatura: " << asignatura << std::endl;
+                archivoCategorias << "Nota Final: " << notaFinal << std::endl;
+                archivoCategorias << "-> " << nombreCategorias.at(i) << std::endl;
+            }
+            break;
+        }
+    }
+    return returnStatement;
+}
+
+//-------------------------------------------------------------------------|>
+
+void categoriasMain() {
+    limpiarArchivosCategorias();
+    for (int indiceEstudiante = 0; indiceEstudiante < cantidadEstudiantes; indiceEstudiante++) {
+        for (int indiceAsignatura = 0; indiceAsignatura < estudiantes[indiceEstudiante].notasFinales.size(); indiceAsignatura++) {
+            estudiantes[indiceEstudiante].categoriaPorAsignatura.push_back(categorizarEstudiante(
+                estudiantes[indiceEstudiante].notasFinales.at(indiceAsignatura), 
+                asignaturasGeneral.at(indiceAsignatura), 
+                estudiantes[indiceEstudiante].codigo));
+        }
+    }
+    
+    // for (int i = 0; i < cantidadEstudiantes; i++) {
+    //     for (auto &categoria : estudiantes[i].categoriaPorAsignatura) {
+    //         std::cout << categoria << std::endl;
+    //     }
+    // }
+}
 
 // ------------------------------ FUNCION MAIN ---------------------------------------------------------------------|>
 //-------------------------------------------------------------------------|>
 
 int main(void) {
+    escribirLog();
     inicializarUsuarios(); 
-    datosProfesor();
+    // datosProfesorMain();
+    datosEstudiantes(); 
+    categoriasMain();
     return EXIT_SUCCESS;
 }
