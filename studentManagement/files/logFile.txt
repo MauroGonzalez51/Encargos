@@ -199,3 +199,71 @@ Programa Iniciado: Tue Nov 29 14:10:39 2022
 [INFO] El usuario james ya existe -> No se creara un nuevo archivo
 [INFO] El usuario johan ya existe -> No se creara un nuevo archivo
 [INFO] El usuario kevin ya existe -> No se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa Iniciado: Tue Nov 29 16:23:52 2022
+
+[INFO] El usuario luis ya existe -> No se creara un nuevo archivo
+[INFO] El usuario jorge ya existe -> No se creara un nuevo archivo
+[INFO] El usuario james ya existe -> No se creara un nuevo archivo
+[INFO] El usuario johan ya existe -> No se creara un nuevo archivo
+[INFO] El usuario kevin ya existe -> No se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa Iniciado: Tue Nov 29 16:24:46 2022
+
+[INFO] El usuario luis ya existe -> No se creara un nuevo archivo
+[INFO] El usuario jorge ya existe -> No se creara un nuevo archivo
+[INFO] El usuario james ya existe -> No se creara un nuevo archivo
+[INFO] El usuario johan ya existe -> No se creara un nuevo archivo
+[INFO] El usuario kevin ya existe -> No se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa Iniciado: Tue Nov 29 16:26:33 2022
+
+[INFO] El usuario luis ya existe -> No se creara un nuevo archivo
+[INFO] El usuario jorge ya existe -> No se creara un nuevo archivo
+[INFO] El usuario james ya existe -> No se creara un nuevo archivo
+[INFO] El usuario johan ya existe -> No se creara un nuevo archivo
+[INFO] El usuario kevin ya existe -> No se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa Iniciado: Tue Nov 29 16:27:00 2022
+
+[INFO] El usuario luis ya existe -> No se creara un nuevo archivo
+[INFO] El usuario jorge ya existe -> No se creara un nuevo archivo
+[INFO] El usuario james ya existe -> No se creara un nuevo archivo
+[INFO] El usuario johan ya existe -> No se creara un nuevo archivo
+[INFO] El usuario kevin ya existe -> No se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa Iniciado: Tue Nov 29 16:27:40 2022
+
+[INFO] El usuario luis ya existe -> No se creara un nuevo archivo
+[INFO] El usuario jorge ya existe -> No se creara un nuevo archivo
+[INFO] El usuario james ya existe -> No se creara un nuevo archivo
+[INFO] El usuario johan ya existe -> No se creara un nuevo archivo
+[INFO] El usuario kevin ya existe -> No se creara un nuevo archivo
+
+--------------------------------------------------------------------------------
+Programa Iniciado: Tue Nov 29 16:29:21 2022
+
+[INFO] El usuario luis ya existe -> No se creara un nuevo archivo
+[INFO] El usuario jorge ya existe -> No se creara un nuevo archivo
+[INFO] El usuario james ya existe -> No se creara un nuevo archivo
+[INFO] El usuario johan ya existe -> No se creara un nuevo archivo
+[INFO] El usuario kevin ya existe -> No se creara un nuevo archivo
+[INFO] Porcentaje Aprobacion {General}: 66.666672%
+
+--------------------------------------------------------------------------------
+Programa Iniciado: Tue Nov 29 16:36:11 2022
+
+[INFO] El usuario luis ya existe -> No se creara un nuevo archivo
+[INFO] El usuario jorge ya existe -> No se creara un nuevo archivo
+[INFO] El usuario james ya existe -> No se creara un nuevo archivo
+[INFO] El usuario johan ya existe -> No se creara un nuevo archivo
+[INFO] El usuario kevin ya existe -> No se creara un nuevo archivo
+[INFO] Porcentaje Aprobacion {General}: 33.333336%
+[INFO] Porcentaje Aprobacion {Informatica}: 0.000000%
+[INFO] Porcentaje Aprobacion {Fisica}: 0.000000%
+[INFO] Porcentaje Aprobacion {Quimica}: 100.000000%

@@ -253,12 +253,44 @@ void categoriasMain() {
                 estudiantes[indiceEstudiante].codigo));
         }
     }
+}
+
+//-------------------------------------------------------------------------|>
+
+void porcentajeAprobacion(const float notaMinimaAprobar) {
+
+    // ------ % APROBACION GENERAL ------------------|>
+    float cantidadAprobados = 0;
+    for (int i = 0; i < cantidadEstudiantes; i++) {
+        for (int asignatura = 0; asignatura < estudiantes[i].notasFinales.size(); asignatura++) {
+            if (estudiantes[i].notasFinales.at(asignatura) >= notaMinimaAprobar) cantidadAprobados++;
+        }
+    }
+    float totalNotas = estudiantes[0].notasFinales.size() * cantidadEstudiantes;
+    escribirLog("Porcentaje Aprobacion {General}: " + std::to_string(((cantidadAprobados / totalNotas) * 100)) + "%");
     
-    // for (int i = 0; i < cantidadEstudiantes; i++) {
-    //     for (auto &categoria : estudiantes[i].categoriaPorAsignatura) {
-    //         std::cout << categoria << std::endl;
-    //     }
-    // }
+    // ------ % APROBACION x ASIGNATURA -------------|>
+
+    for (int indiceAsignatura = 0; indiceAsignatura < asignaturasGeneral.size(); indiceAsignatura++) {
+        float cantidadAprobados = 0;
+        for (int indiceEstudiante = 0; indiceEstudiante < cantidadEstudiantes; indiceEstudiante++) {
+            if (estudiantes[indiceEstudiante].notasFinales.at(indiceAsignatura) >= notaMinimaAprobar) cantidadAprobados++;
+        }
+        escribirLog("Porcentaje Aprobacion {" + asignaturasGeneral.at(indiceAsignatura) + "}: " + std::to_string((cantidadAprobados / cantidadEstudiantes) * 100) + "%");
+    }
+}
+
+//-------------------------------------------------------------------------|>
+
+
+
+
+
+//-------------------------------------------------------------------------|>
+
+void analisisMain() {
+    categoriasMain();
+    porcentajeAprobacion(50.0);
 }
 
 // ------------------------------ FUNCION MAIN ---------------------------------------------------------------------|>
@@ -269,6 +301,6 @@ int main(void) {
     inicializarUsuarios(); 
     // datosProfesorMain();
     datosEstudiantes(); 
-    categoriasMain();
+    analisisMain();
     return EXIT_SUCCESS;
 }
