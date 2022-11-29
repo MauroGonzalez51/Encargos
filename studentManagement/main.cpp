@@ -173,7 +173,41 @@ void datosProfesor() {
 
 void datosEstudiantes {
     std::cout << "[ESTUDIANTES]" << std::endl;
+
+    for (int i = 0; i < cantidadEstudiantes; i++) {
+        
+        // ---------------- NOMBRE -------------------------|>
+        do {
+            std::cout << "{Estudiante " << i + 1 << "} Ingrese su nombre: ";
+            std::cin >> estudiantes[i].nombre;
+        } while (estudiantes[i].nombre.empty());
+
+        // ---------------- CODIGO -------------------------|>
+        do {
+            std::cout << "{Estudiante " << i + 1 << "} Ingrese su codigo: ";
+            std::cin >> estudiantes[i].codigo;
+        } while (estudiantes[i].codigo);
+
+        // ---------------- NOTAS FINALES ------------------|>
+        for (int asignatura = 0; asignatura < estudiantes[i].notasFinales.size(); asignatura++) {
+            float notaAux;
+            do {
+                std::cout << "{Estudiante " << i + 1 << "} {Asignatura " << asignaturasGeneral.at(asignatura) << "} Ingrese su nota: ";
+                std::cin >> notaAux;
+            } while (notaAux < 0.0);
+            estudiantes[i].notasFinales.push_back(notaAux);               
+        }
+    }
 }
+
+// ------------------------------ ANALISIS DE DATOS ----------------------------------------------------------------|>
+//-------------------------------------------------------------------------|>
+
+
+
+
+// ------------------------------ FUNCION MAIN ---------------------------------------------------------------------|>
+//-------------------------------------------------------------------------|>
 
 int main(void) {
     inicializarUsuarios(); 
