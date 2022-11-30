@@ -267,3 +267,37 @@ Programa Iniciado: Tue Nov 29 16:36:11 2022
 [INFO] Porcentaje Aprobacion {Informatica}: 0.000000%
 [INFO] Porcentaje Aprobacion {Fisica}: 0.000000%
 [INFO] Porcentaje Aprobacion {Quimica}: 100.000000%
+
+--------------------------------------------------------------------------------
+Programa Iniciado: Wed Nov 30 00:18:27 2022
+
+[INFO] El usuario luis ya existe -> No se creara un nuevo archivo
+[INFO] El usuario jorge ya existe -> No se creara un nuevo archivo
+[INFO] El usuario james ya existe -> No se creara un nuevo archivo
+[INFO] El usuario johan ya existe -> No se creara un nuevo archivo
+[INFO] El usuario kevin ya existe -> No se creara un nuevo archivo
+[INFO] Porcentaje Aprobacion {General}: 100.000000%
+[INFO] Porcentaje Aprobacion {Informatica}: 100.000000%
+[INFO] Porcentaje Aprobacion {Fisica}: 100.000000%
+[INFO] Porcentaje Aprobacion {Quimica}: 100.000000%
+[INFO] Nota Minima General: 0.000000 | Codigo Estudiante:  | Asingatura: Informatica
+[INFO] Nota Minima {Informatica}: 0.000000 | Codigo Estudiante: 
+[INFO] Nota Minima {Fisica}: 0.000000 | Codigo Estudiante: 
+[INFO] Nota Minima {Quimica}: 0.000000 | Codigo Estudiante: 
+
+--------------------------------------------------------------------------------
+Programa Iniciado: Wed Nov 30 00:20:51 2022
+
+[INFO] El usuario luis ya existe -> No se creara un nuevo archivo
+[INFO] El usuario jorge ya existe -> No se creara un nuevo archivo
+[INFO] El usuario james ya existe -> No se creara un nuevo archivo
+[INFO] El usuario johan ya existe -> No se creara un nuevo archivo
+[INFO] El usuario kevin ya existe -> No se creara un nuevo archivo
+[INFO] Porcentaje Aprobacion {General}: 66.666672%
+[INFO] Porcentaje Aprobacion {Informatica}: 100.000000%
+[INFO] Porcentaje Aprobacion {Fisica}: 0.000000%
+[INFO] Porcentaje Aprobacion {Quimica}: 100.000000%
+[INFO] Nota Minima General: 56.000000 | Codigo Estudiante: 8935 | Asingatura: Quimica
+[INFO] Nota Minima {Informatica}: 56.000000 | Codigo Estudiante: 8935
+[INFO] Nota Minima {Fisica}: 45.000000 | Codigo Estudiante: 8935
+[INFO] Nota Minima {Quimica}: 98.000000 | Codigo Estudiante: 8935

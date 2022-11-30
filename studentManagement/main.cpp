@@ -260,6 +260,7 @@ void categoriasMain() {
 void porcentajeAprobacion(const float notaMinimaAprobar) {
 
     // ------ % APROBACION GENERAL ------------------|>
+    
     float cantidadAprobados = 0;
     for (int i = 0; i < cantidadEstudiantes; i++) {
         for (int asignatura = 0; asignatura < estudiantes[i].notasFinales.size(); asignatura++) {
@@ -282,15 +283,49 @@ void porcentajeAprobacion(const float notaMinimaAprobar) {
 
 //-------------------------------------------------------------------------|>
 
+void estudianteMenorNota() {
 
+    // ----- MENOR NOTA EN GENERAL ------------------|>
 
+    float menorNota = 0.0, indiceEstudiante, indiceAsignatura;
+    std::string codigoEstudiante;
+    for (int i = 0; i < cantidadEstudiantes; i++) {
+        for (int asignatura = 0; asignatura < estudiantes[i].notasFinales.size(); asignatura++) {
+            if (menorNota < estudiantes[i].notasFinales.at(asignatura)) {
+                menorNota = estudiantes[i].notasFinales.at(i);
+                indiceEstudiante = i;
+                indiceAsignatura = asignatura;
+                codigoEstudiante = estudiantes[i].codigo;
+            }
+        }
+    }
 
+    escribirLog("Nota Minima General: " + std::to_string(menorNota) + 
+        " | Codigo Estudiante: " + codigoEstudiante + 
+        " | Asingatura: " + asignaturasGeneral.at(indiceAsignatura));
+    
+
+    // ----- MENOR NOTA x ASIGNATURA ----------------|>
+
+    for (int indiceAsignatura = 0; indiceAsignatura < asignaturasGeneral.size(); indiceAsignatura++) {
+        float menorNota = 0.0;
+        std::string codigoEstudiante;
+        for (int indiceEstudiante = 0; indiceEstudiante < cantidadEstudiantes; indiceEstudiante++) {
+            if (menorNota < estudiantes[indiceEstudiante].notasFinales.at(indiceAsignatura)) {
+                menorNota = estudiantes[indiceEstudiante].notasFinales.at(indiceAsignatura);
+                codigoEstudiante = estudiantes[indiceEstudiante].codigo;
+            }
+        }
+        escribirLog("Nota Minima {" + asignaturasGeneral.at(indiceAsignatura) + "}: " + std::to_string(menorNota) + " | Codigo Estudiante: " + codigoEstudiante);
+    }
+}
 
 //-------------------------------------------------------------------------|>
 
 void analisisMain() {
     categoriasMain();
     porcentajeAprobacion(50.0);
+    estudianteMenorNota();
 }
 
 // ------------------------------ FUNCION MAIN ---------------------------------------------------------------------|>
