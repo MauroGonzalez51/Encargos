@@ -334,7 +334,7 @@ void analisisMain() {
 int main(void) {
     escribirLog();
     inicializarUsuarios(); 
-    // datosProfesorMain();
+    datosProfesorMain();
     datosEstudiantes(); 
     analisisMain();
     return EXIT_SUCCESS;
